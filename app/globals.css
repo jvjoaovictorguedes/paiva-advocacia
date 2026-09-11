@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-moss: #26342b;
+  --color-charcoal: #202321;
+  --color-stone: #858a84;
+  --color-limestone: #c9c7be;
+  --color-ivory: #f5f2eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+::selection {
+  background-color: var(--color-moss);
+  color: var(--color-ivory);
+}
