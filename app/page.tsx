@@ -1,7 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import AboutPreview from "@/components/sections/AboutPreview";
 import Differentiators from "@/components/sections/Differentiators";
-import Testimonials from "@/components/sections/Testimonials";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import InstagramFeed from "@/components/sections/InstagramFeed";
 import ArticlesPreview from "@/components/sections/ArticlesPreview";
@@ -13,7 +12,6 @@ export default function Home() {
       <Hero />
       <AboutPreview />
       <Differentiators />
-      <Testimonials />
       <GoogleReviews />
       <InstagramFeed />
       <ArticlesPreview />
