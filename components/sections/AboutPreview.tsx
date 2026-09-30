@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
@@ -7,12 +8,13 @@ export default function AboutPreview() {
     <section className="bg-ivory py-20 md:py-28">
       <Container className="grid gap-14 md:grid-cols-2 md:items-center">
         <div className="order-2 md:order-1">
-          <div className="aspect-[4/5] w-full bg-limestone/40 md:aspect-[4/5]">
-            <div className="flex h-full w-full items-center justify-center border border-moss/10">
-              <span className="px-8 text-center font-body text-xs tracking-widest2 uppercase text-stone">
-                Espaço reservado para fotografia institucional do escritório
-              </span>
-            </div>
+          <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <Image
+              src="/sobre-escritorio.jpg"
+              alt="Advogado da Paiva Advocacia assinando documentos no escritório"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
 
