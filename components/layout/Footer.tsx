@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
+import { InstagramIcon } from "@/components/ui/Icons";
 import { site } from "@/content/site";
 import { pillars } from "@/content/areas";
 
@@ -14,13 +15,22 @@ export default function Footer() {
       <Container className="relative py-16">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <Logo tone="ivory" />
+            <Logo />
             <p className="mt-6 max-w-xs font-body text-sm leading-relaxed text-limestone">
               {site.description}
             </p>
             <p className="mt-6 font-body text-xs tracking-widest2 uppercase text-limestone/70">
               {site.oab}
             </p>
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="mt-5 inline-flex text-ivory/80 hover:text-ivory"
+            >
+              <InstagramIcon className="h-5 w-5" />
+            </a>
           </div>
 
           <div>
