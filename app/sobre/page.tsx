@@ -76,33 +76,6 @@ export default function SobrePage() {
         </Container>
       </section>
 
-      <section className="bg-ivory py-20 md:py-28">
-        <Container>
-          <SectionHeading eyebrow="Equipe" title="Sócios à frente de cada caso." />
-          <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { name: "Nome do Sócio", role: "Sócio-fundador · Direito Empresarial" },
-              { name: "Nome da Sócia", role: "Sócia · Tributário e Compliance" },
-              { name: "Nome do Sócio", role: "Sócio · Contencioso Estratégico" },
-            ].map((person) => (
-              <div key={person.name} className="border border-limestone/60">
-                <div className="flex aspect-[4/5] items-center justify-center bg-limestone/30">
-                  <span className="px-6 text-center font-body text-xs tracking-widest2 uppercase text-stone">
-                    Foto institucional
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-lg text-charcoal">{person.name}</h3>
-                  <p className="mt-1 font-body text-xs tracking-widest2 uppercase text-stone">
-                    {person.role}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       <ContactCTA />
     </>
   );
