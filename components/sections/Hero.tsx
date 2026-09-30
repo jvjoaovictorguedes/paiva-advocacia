@@ -13,7 +13,8 @@ export default function Hero() {
       />
       <Container className="relative pt-16 pb-14 md:pt-24 md:pb-20">
         <div className="max-w-3xl">
-          <span className="font-body text-xs tracking-widest2 uppercase text-stone">
+          <span className="flex items-center gap-3 font-body text-xs tracking-widest2 uppercase text-stone">
+            <span className="h-px w-8 bg-brass" aria-hidden="true" />
             {site.fullName}
           </span>
           <h1 className="mt-5 font-display text-4xl leading-[1.1] text-charcoal md:text-6xl">
@@ -38,9 +39,14 @@ export default function Hero() {
           {pillars.map((pillar) => {
             const Icon = icons[pillar.icon];
             return (
-              <div key={pillar.title} className="bg-moss px-6 py-9">
-                <Icon className="h-8 w-8 text-limestone" />
-                <h3 className="mt-4 font-display text-lg text-ivory">{pillar.title}</h3>
+              <div
+                key={pillar.title}
+                className="group bg-moss px-6 py-9 transition-colors duration-300 hover:bg-[#2c3b31]"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-brass/40 bg-brass/10 transition-colors duration-300 group-hover:bg-brass/20">
+                  <Icon className="h-6 w-6 text-brass" />
+                </span>
+                <h3 className="mt-5 font-display text-lg text-ivory">{pillar.title}</h3>
                 <p className="mt-2 font-body text-xs leading-relaxed text-limestone/80">
                   {pillar.summary}
                 </p>

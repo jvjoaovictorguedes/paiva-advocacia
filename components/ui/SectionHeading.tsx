@@ -20,7 +20,8 @@ export default function SectionHeading({
   return (
     <div className={`flex flex-col gap-4 max-w-2xl ${alignment}`}>
       {eyebrow && (
-        <span className={`font-body text-xs tracking-widest2 uppercase ${eyebrowColor}`}>
+        <span className={`flex items-center gap-3 font-body text-xs tracking-widest2 uppercase ${eyebrowColor}`}>
+          <span className="h-px w-8 bg-brass" aria-hidden="true" />
           {eyebrow}
         </span>
       )}

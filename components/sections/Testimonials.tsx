@@ -15,11 +15,10 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <blockquote
               key={t.author}
-              className="flex h-full flex-col justify-between border border-limestone/60 p-8"
+              className="flex h-full flex-col justify-between border border-limestone/60 bg-ivory p-8 shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
-              <p className="font-display text-lg leading-snug text-charcoal">
-                &ldquo;{t.quote}&rdquo;
-              </p>
+              <span className="font-display text-5xl leading-none text-brass/40">&ldquo;</span>
+              <p className="mt-2 font-display text-lg leading-snug text-charcoal">{t.quote}</p>
               <footer className="mt-8 font-body text-xs tracking-widest2 uppercase text-stone">
                 {t.author}
                 <br />

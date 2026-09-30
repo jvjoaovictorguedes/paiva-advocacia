@@ -124,6 +124,14 @@ export function WhatsAppIcon(props: IconProps) {
   );
 }
 
+export function CheckIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" {...base} strokeWidth={2} {...props}>
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
 export function InstagramIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" {...base} strokeWidth={1.6} {...props}>

@@ -16,15 +16,16 @@ export default function ArticlesPreview() {
           </Button>
         </div>
 
-        <div className="mt-14 grid gap-10 md:grid-cols-3">
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
           {articles.map((article) => (
             <Link
               key={article.slug}
               href={`/artigos/${article.slug}`}
-              className="group flex flex-col border-t border-moss/20 pt-6"
+              className="group flex flex-col border border-limestone/50 bg-ivory p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brass/50 hover:shadow-md"
             >
-              <span className="font-body text-xs tracking-widest2 uppercase text-stone">
-                {article.category} · {article.date}
+              <span className="inline-flex w-fit items-center gap-2 font-body text-xs tracking-widest2 uppercase text-brass">
+                {article.category}
+                <span className="text-stone">· {article.date}</span>
               </span>
               <h3 className="mt-4 font-display text-xl leading-snug text-charcoal group-hover:text-moss">
                 {article.title}

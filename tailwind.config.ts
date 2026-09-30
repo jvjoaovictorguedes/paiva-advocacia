@@ -14,6 +14,7 @@ const config: Config = {
         stone: "#858A84",
         limestone: "#C9C7BE",
         ivory: "#F5F2EB",
+        brass: "#B08D57",
       },
       fontFamily: {
         display: ["var(--font-bodoni)", "Georgia", "serif"],
