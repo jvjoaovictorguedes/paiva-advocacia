@@ -5,7 +5,7 @@ import Link from "next/link";
 import Logo from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
 import { MenuIcon, CloseIcon } from "@/components/ui/Icons";
-import { site } from "@/content/site";
+import { site, whatsappHref } from "@/content/site";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Button href="/contato" className="!px-6 !py-3">
+          <Button href={whatsappHref()} external className="!px-6 !py-3">
             Fale com um especialista
           </Button>
         </div>
@@ -57,13 +57,15 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/contato"
+            <a
+              href={whatsappHref()}
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center justify-center bg-moss px-6 py-3.5 text-[0.7rem] tracking-widest2 uppercase font-body text-ivory"
             >
               Fale com um especialista
-            </Link>
+            </a>
           </nav>
         </div>
       )}

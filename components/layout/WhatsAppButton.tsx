@@ -1,14 +1,10 @@
 import { WhatsAppIcon } from "@/components/ui/Icons";
-import { site } from "@/content/site";
+import { whatsappHref } from "@/content/site";
 
 export default function WhatsAppButton() {
-  const message = encodeURIComponent(
-    "Olá, gostaria de falar com a Paiva Advocacia e Consultoria."
-  );
-
   return (
     <a
-      href={`https://wa.me/${site.whatsapp}?text=${message}`}
+      href={whatsappHref()}
       target="_blank"
       rel="noreferrer"
       aria-label="Falar no WhatsApp"

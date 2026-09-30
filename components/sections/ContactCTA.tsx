@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { whatsappHref } from "@/content/site";
 
 export default function ContactCTA() {
   return (
@@ -16,7 +17,7 @@ export default function ContactCTA() {
           Agende uma conversa inicial com nossos sócios e entenda como podemos apoiar o próximo
           passo do seu negócio.
         </p>
-        <Button href="/contato" variant="ghost">
+        <Button href={whatsappHref()} variant="ghost" external>
           Agendar conversa
         </Button>
       </Container>

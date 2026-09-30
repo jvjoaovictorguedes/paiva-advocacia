@@ -1,3 +1,7 @@
+export function whatsappHref(message = "Olá, gostaria de falar com a Paiva Advocacia e Consultoria.") {
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
 export const site = {
   name: "Paiva",
   fullName: "Paiva Advocacia e Consultoria",

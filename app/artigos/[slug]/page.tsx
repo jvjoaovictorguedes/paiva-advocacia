@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { articles } from "@/content/articles";
+import { whatsappHref } from "@/content/site";
 
 type Params = { slug: string };
 
@@ -62,7 +63,9 @@ export default async function ArtigoPage({ params }: { params: Promise<Params> }
             Precisa discutir como este tema se aplica ao seu negócio?
           </p>
           <div className="mt-5">
-            <Button href="/contato">Fale com um especialista</Button>
+            <Button href={whatsappHref()} external>
+              Fale com um especialista
+            </Button>
           </div>
         </div>
 

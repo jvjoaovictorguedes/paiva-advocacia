@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { site } from "@/content/site";
+import Button from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/Icons";
+import { site, whatsappHref } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -15,7 +17,7 @@ export default function ContatoPage() {
         <SectionHeading
           eyebrow="Contato"
           title="Vamos conversar sobre o seu caso."
-          description="Preencha o formulário ou fale diretamente pelos canais abaixo. O primeiro retorno costuma acontecer em até um dia útil."
+          description="Fale diretamente pelo WhatsApp ou pelos canais abaixo. O primeiro retorno costuma acontecer em até um dia útil."
         />
 
         <div className="mt-16 grid gap-14 md:grid-cols-[1fr_1.2fr]">
@@ -54,75 +56,21 @@ export default function ContatoPage() {
             </div>
           </div>
 
-          <form className="space-y-6 border border-limestone/60 p-8 md:p-10">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <label className="block">
-                <span className="font-body text-xs tracking-widest2 uppercase text-stone">
-                  Nome
-                </span>
-                <input
-                  type="text"
-                  name="nome"
-                  required
-                  className="mt-2 w-full border-b border-limestone bg-transparent py-2 font-body text-sm text-charcoal outline-none focus:border-moss"
-                />
-              </label>
-              <label className="block">
-                <span className="font-body text-xs tracking-widest2 uppercase text-stone">
-                  Empresa
-                </span>
-                <input
-                  type="text"
-                  name="empresa"
-                  className="mt-2 w-full border-b border-limestone bg-transparent py-2 font-body text-sm text-charcoal outline-none focus:border-moss"
-                />
-              </label>
+          <div className="flex flex-col items-start justify-center gap-6 border border-limestone/60 p-8 md:p-10">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-moss text-ivory">
+              <WhatsAppIcon className="h-7 w-7" />
             </div>
-            <div className="grid gap-6 sm:grid-cols-2">
-              <label className="block">
-                <span className="font-body text-xs tracking-widest2 uppercase text-stone">
-                  E-mail
-                </span>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="mt-2 w-full border-b border-limestone bg-transparent py-2 font-body text-sm text-charcoal outline-none focus:border-moss"
-                />
-              </label>
-              <label className="block">
-                <span className="font-body text-xs tracking-widest2 uppercase text-stone">
-                  Telefone
-                </span>
-                <input
-                  type="tel"
-                  name="telefone"
-                  className="mt-2 w-full border-b border-limestone bg-transparent py-2 font-body text-sm text-charcoal outline-none focus:border-moss"
-                />
-              </label>
+            <div>
+              <h3 className="font-display text-xl text-charcoal">Fale com um especialista agora</h3>
+              <p className="mt-3 font-body text-sm leading-relaxed text-stone">
+                Conte um pouco sobre o seu caso diretamente no WhatsApp e um de nossos
+                especialistas retorna o quanto antes.
+              </p>
             </div>
-            <label className="block">
-              <span className="font-body text-xs tracking-widest2 uppercase text-stone">
-                Como podemos ajudar
-              </span>
-              <textarea
-                name="mensagem"
-                rows={5}
-                required
-                className="mt-2 w-full border-b border-limestone bg-transparent py-2 font-body text-sm text-charcoal outline-none focus:border-moss"
-              />
-            </label>
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 bg-moss px-7 py-3.5 font-body text-[0.7rem] tracking-widest2 uppercase text-ivory transition-colors hover:bg-charcoal"
-            >
-              Enviar mensagem
-            </button>
-            <p className="font-body text-xs leading-relaxed text-stone">
-              Este formulário é um modelo de front-end. Para receber os envios, conecte-o a um
-              serviço de e-mail ou backend de sua preferência.
-            </p>
-          </form>
+            <Button href={whatsappHref()} external>
+              Falar no WhatsApp
+            </Button>
+          </div>
         </div>
       </Container>
     </section>

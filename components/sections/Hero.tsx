@@ -1,6 +1,6 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import { site } from "@/content/site";
+import { site, whatsappHref } from "@/content/site";
 import { pillars } from "@/content/areas";
 import { icons } from "@/components/ui/Icons";
 
@@ -23,7 +23,9 @@ export default function Hero() {
             {site.description}
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <Button href="/contato">Fale com um especialista</Button>
+            <Button href={whatsappHref()} external>
+              Fale com um especialista
+            </Button>
             <Button href="/atuacao" variant="secondary">
               Conheça nossa atuação
             </Button>
